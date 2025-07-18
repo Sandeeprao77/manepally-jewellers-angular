@@ -1,0 +1,160 @@
+<form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()" class="p-3">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">Branch</label>
+      <select class="form-select" formControlName="branch">
+         <option value="">Select Branch</option>
+        <option selected>Karimnagar</option>
+        <option selected>Madhapur</option>
+        <option selected>Kukatpally</option>
+        <option selected>Secunderabad</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">Refer Invoice Number</label>
+      <input class="form-control" formControlName="refer_invoice_number" />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">Customer Name</label>
+      <input class="form-control" formControlName="customer_name" />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">Phone</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="phone"
+        placeholder="Enter Phone Number"
+      />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">Country</label>
+      <select class="form-select" formControlName="country">
+        <option value="">Select Country</option>
+        <option selected>India</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">State</label>
+      <select class="form-select" formControlName="state">
+        <option value="">Select state</option>
+        <option selected>Telangana</option>
+        <option selected>Andhra pradesh</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">City</label>
+      <select class="form-select" formControlName="city">
+        <option value="">Select City</option>
+        <option selected>Karimnagar</option>
+        <option selected>Hyderabad</option>
+        <option selected>Warangal</option>
+        <option selected>Vijayawada</option>
+        <option selected>Vishakapatnam</option>
+        <option selected>Guntur</option>
+        <option selected>Kurnool</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">PAN Number</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="pan_number"
+        placeholder="Enter PAN Number"
+      />
+    </div>
+  </div>
+
+  <div class="row g-3 mt-3">
+    <div class="col-md-6">
+      <label class="form-label fw-semibold">Address</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="address"
+        placeholder="Address"
+      />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-semibold">Notes</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="notes"
+        placeholder="Note (optional)"
+      />
+    </div>
+  </div>
+
+  <div formArrayName="products" class="mt-4">
+    <div
+      *ngFor="let product of products.controls; let i = index"
+      [formGroupName]="i"
+      class="card p-3 mb-4"
+    >
+      <h5 class="fw-bold mb-3">Product {{ i + 1 }}</h5>
+      <div class="row g-3">
+        <div class="col-md-2">
+          <input class="form-control" placeholder="HSN" formControlName="hsn" />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Description"
+            formControlName="description"
+          />
+        </div>
+        <div class="col-md-2">
+          <input class="form-control" placeholder="Qty" formControlName="qty" />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Gross Wt"
+            formControlName="gross_wt"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Calc. Wt"
+            formControlName="calc_wt"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Rate"
+            formControlName="rate"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Amount"
+            formControlName="amount"
+          />
+        </div>
+      </div>
+      <div class="col-md-1 mt-3">
+        <button
+          type="button"
+          class="btn btn-outline-danger"
+          (click)="removeProduct(i)"
+        >
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-dark mt-3" (click)="addProduct()">
+    + Add Product
+  </button>
+
+  <div class="text-end mt-4">
+    <button class="btn btn-secondary me-2" type="reset">Close</button>
+    <button class="btn btn-primary" type="submit" (click)="save()">Save</button>
+  </div>
+</form>

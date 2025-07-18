@@ -1,0 +1,19 @@
+
+ body {
+      background-color: #f8f7fc;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    .form-section {
+      background-color: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .bi-trash {
+      color: red;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }

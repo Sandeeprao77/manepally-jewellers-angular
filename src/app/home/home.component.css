@@ -1,0 +1,75 @@
+.custom-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-circle {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: #fbbc04;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+.icon-circle2 {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: #443a88;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-circle3 {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: #23a57c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+.custom-background {
+  background-color: rgb(234, 233, 230);
+}
+.icon-circle4 {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: #e05e26;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
