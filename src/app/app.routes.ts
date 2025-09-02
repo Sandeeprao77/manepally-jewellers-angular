@@ -11,6 +11,7 @@ import { BranchesComponent } from './branches/branches.component';
 import { ViewInvoiceComponent } from './view-invoice/view-invoice.component';
 import { ViewPurchaseComponent } from './view-purchase/view-purchase.component';
 import { ViewBranchesComponent } from './view-branches/view-branches.component';
+import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
 
 export const routes: Routes = [
   { path: '', component: LoginPageComponent },
@@ -35,7 +36,9 @@ export const routes: Routes = [
       {
         path: 'view-invoice',
         component: ViewInvoiceComponent,
-        children: [{ path: 'invoice', component: InvoicesComponent }],
+        children: [{ path: 'invoice', component: InvoicesComponent },
+          {path:'invoice-details',component:InvoiceDetailsComponent}
+        ],
       },
       {
         path: 'view-branches',

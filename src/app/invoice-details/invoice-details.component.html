@@ -1,0 +1,151 @@
+
+<div class="container-fluid">
+  <div class="row mt-3 ">
+    <div class="col">
+      <img src="/images/logo.jpg" alt="Logo" class="w-50 text-center" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 mt-4 me-2 text-center">
+        <pre><b>ISO 9001:20215 
+  Certified</b> </pre>
+    </div>
+    <div class="col-md-6 mt-4 me-2 text-center">
+        <pre><b>Manepally Jewellers Pvt Ltd, 3-3-600/603, Main Road,  
+             GeneralBazaar,
+ Secunderabad - 500003, Telangana, India. Email.
+            onlinemanepally.com.</b>
+        </pre>
+    </div>
+    <div class="col-md-3 mt-4 me-2 text-center">
+        <pre> <b>          BIS HALL MARK 
+             JEWELLERS
+        GSTIN-36AANCM3606Q1ZV</b></pre>
+    </div>
+  </div>
+  <div class="row">
+    <form [formGroup]="invoiceForm" class="p-4">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label fw-semibold">Customer Name</label>
+      <input type="text" class="form-control" formControlName="customer_name" />
+    </div>
+    
+    <div class="col-md-4 ">
+      <label class="form-label fw-semibold text-end">Mobile Number</label>
+      <input type="text" class="form-control" formControlName="phone" />
+    </div>
+    
+    
+    <div class="row g-3">
+        <div class="col-md-4">
+      <label class="form-label fw-semibold">Date</label>
+      <input type="text" class="form-control" formControlName="createdAt" />
+    </div>
+    </div>
+    
+  </div>
+
+  <hr class="my-4" />
+
+  <div formArrayName="products">
+    <div class="card p-3 my-3 border">
+      <div class="row g-3 mb-2">
+        <div class="col-md-2">
+          <input class="form-control" placeholder="HSN" formControlName="hsn" />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Description"
+            formControlName="description"
+          />
+        </div>
+        <div class="col-md-2">
+          <input class="form-control" placeholder="Qty" formControlName="qty" />
+        </div>
+        <div class="col-md-2">
+          <input
+            type="number"
+            formControlName="grossWt"
+            class="form-control"
+            placeholder="Gross.Wt"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            type="number"
+            formControlName="calcWt"
+            class="form-control"
+            placeholder="Calc.Wt"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Rate"
+            formControlName="rate"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Amt"
+            formControlName="amount"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Purity"
+            formControlName="purity"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Value"
+            formControlName="value"
+          />
+        </div>
+        <div class="col-md-2">
+          <input
+            class="form-control"
+            placeholder="Margin"
+            formControlName="margin"
+          />
+        </div>
+      </div>
+
+      <div formArrayName="subItems">
+        <h6 class="fw-semibold mt-3">Sub Items</h6>
+        <div class="row g-2 mb-2 align-items-end">
+          <div class="col-md-4">
+            <input
+              class="form-control"
+              placeholder="Name"
+              formControlName="name"
+            />
+          </div>
+          <div class="col-md-3">
+            <input
+              class="form-control"
+              placeholder="Quantity"
+              formControlName="quantity"
+            />
+          </div>
+          <div class="col-md-3">
+            <input
+              class="form-control"
+              placeholder="Rate"
+              formControlName="rate"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+  </div>
+</div>

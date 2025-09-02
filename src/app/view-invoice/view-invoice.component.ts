@@ -118,4 +118,7 @@ export class ViewInvoiceComponent implements OnInit {
   isCreatingInvoice(): boolean {
     return this.router.url.includes('view-invoice/invoice');
   }
+  isInvoiceDetails():boolean{
+    return this.router.url.includes('')
+  }
 }

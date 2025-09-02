@@ -1,5 +1,4 @@
 <div *ngIf="!isCreatingInvoice()">
-  
   <div
     class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2"
   >
@@ -49,18 +48,22 @@
           <td>{{ invoice.status }}</td>
           <td class="d-flex btn-group">
             <button
-              class="btn "
+              class="btn"
               data-bs-toggle="modal"
               data-bs-target="#myEmptyModal"
               (click)="editInvoice(invoice)"
             >
-              <i class="bi bi-pencil-square"></i>
+              <b><i class="bi bi-pencil-square"></i></b>
             </button>
-            <button class="btn " (click)="deleteinvoice(invoice._id)">
-              <i class="bi bi-trash3"></i>
+            <button class="btn" (click)="deleteinvoice(invoice._id)">
+              <b><i class="bi bi-trash3"></i></b>
             </button>
-             <button class="btn " (click)="deleteinvoice(invoice._id)">
-              <i class="bi bi-eye"></i>
+            <button
+              class="btn"
+              [routerLink]="['invoice-details']"
+              routerLinkActive="active"
+            >
+              <b><i class="bi bi-eye"></i></b>
             </button>
           </td>
         </tr>
